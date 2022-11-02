@@ -1,0 +1,120 @@
+
+        .chatWindowContainer{
+          width: 371px;
+          box-shadow: 0 0 11px 1px #82828225;
+          border: 1px solid #949494;
+          font-family: Arial, sans-serif;
+      }
+
+      .chatWindow {
+          height: 441px;
+      }
+
+      .titleBar {
+          background: #241056;
+          font-size: 14px;
+          border: 1px solid #241056;
+          padding:  5px 10px;
+          color: #d2cddb;
+      }
+
+      .icon {
+          height: 24px;
+          width: 24px;
+          font-size: 24px;
+          color: white;
+          float:right;
+          margin-top: -5px;
+          text-align: right;
+      }
+
+      .chat{
+          padding:20px;
+          height:calc(100% - 68px);
+          max-width: 265px;
+      }
+
+      .chatbox{
+          border-radius: 5px 5px 5px 5px;
+          font-size: 14px;
+          padding:10px;
+          margin-bottom: 13px;
+      }
+
+      .incoming{
+          background: #f6f6f6;
+          color: #242424;
+      }
+
+      .typing{
+          background: #f6f6f6; 
+          width: 67px;
+      }
+
+      .loader {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          display: block;
+          margin:5px auto;
+          position: relative;
+          background: #b2b2b2;
+          box-shadow: -18px 0 #b2b2b2, 18px 0 #b2b2b2;
+          box-sizing: border-box;
+          animation: bouncing 2s linear infinite;
+          }
+
+      @keyframes bouncing {
+      33% {
+          background: #b2b2b2;
+          box-shadow: -18px 0 #e5e5e5, 18px 0 #b2b2b2;
+      }
+      66% {
+          background: #e5e5e5;
+          box-shadow: -18px 0 #b2b2b2, 18px 0 #b2b2b2;
+      }
+      100% {
+          background: #b2b2b2;
+          box-shadow: -18px 0 #b2b2b2, 18px 0 #e5e5e5;
+      }
+      }
+
+
+      .outgoing{
+          background: #5627d8;
+          color: #fff;
+      }
+
+      .textArea{
+          display: table;
+          border-top: 1px solid #949494;
+          width: 351px;
+          padding:10px;
+      }
+
+      textarea {
+          width: 315px;
+          height: 20px;
+          border: none;
+          overflow: auto;
+          outline: none;
+          resize: none; /*remove the resize handle on the bottom right*/
+          color:#242424;
+      }
+
+      textarea::placeholder {
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          color: #767676;
+      }
+
+      .iconSend {
+          display:table-cell;
+          vertical-align:middle;
+          width: 24px;
+          height: 24px;
+          -webkit-text-fill-color:#5627d8;
+          transform: rotate(-20deg);
+      }
+       button {float:right;}
+
