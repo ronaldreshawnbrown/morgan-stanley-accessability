@@ -1,15 +1,12 @@
-import './App.css';
-import React, {useState, useEffect, useContext, useRef} from "react";
-import { ChatContext } from '../src/context/ChatContext';
+import React, {useEffect, useContext, useRef} from "react";
+import { ChatContext } from '../context/ChatContext';
 
-import ChatHistory from '../src/components/ChatHistory';
-import SendChat from '../src/components/SendChat';
-import ChatContainer from '../src/components/ChatContainer';
+import ChatHistory from '../components/ChatHistory';
+import SendChat from '../components/SendChat';
 
-function App() {
+function ChatContainer() {
   const [chats, setChat] = useContext(ChatContext);
   const chatInitiated = useRef(false);
-  const [showChat, setShowChat] = useState(false);
 
 useEffect(()=>{
 
@@ -51,4 +48,4 @@ const sayHello = (newMessage) =>{
   );
 }
 
-export default App;
+export default ChatContainer;
