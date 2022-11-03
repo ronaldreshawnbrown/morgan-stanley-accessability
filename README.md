@@ -18,6 +18,6 @@ Morgan Stanley Accessibility Assessment.
   npm start
   ```
 
-## Contact
+### Contact
 Ronald Brown -  ronald.reshawn.brown@gmail.com
 
