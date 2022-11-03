@@ -33,10 +33,10 @@ const sayHello = (newMessage) =>{
     <div className="chatWindowContainer" aria-label="Chat Window">
      
       <div class="chatWindow">
-            <div class="titleBar" aria-label="header">
+            <header class="titleBar" aria-label="header">
                 Chat
                 <span tabIndex={0} aria-label="Close" className="material-symbols-outlined icon">close</span>
-            </div>
+            </header>
 
             <ChatHistory />
 
