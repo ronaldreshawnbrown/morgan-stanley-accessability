@@ -6,6 +6,10 @@
           font-family: Arial, sans-serif;
       }
 
+      .chatWindowContainer form{
+        height: 50px
+    }
+
       .chatWindow {
           height: 441px;
       }
@@ -93,13 +97,15 @@
       }
 
       textarea {
-          width: 315px;
+          width: 300px;
           height: 20px;
           border: none;
           overflow: auto;
           outline: none;
+          padding-top:7px;
           resize: none; /*remove the resize handle on the bottom right*/
           color:#242424;
+          font-family: Arial, sans-serif;
       }
 
       textarea::placeholder {
@@ -116,5 +122,8 @@
           -webkit-text-fill-color:#5627d8;
           transform: rotate(-20deg);
       }
-       button {float:right;}
+       button {float:right;
+        background: white;
+        border: white;
+        }
 

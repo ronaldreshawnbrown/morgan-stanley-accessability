@@ -12,16 +12,26 @@ const AddChat = () => {
 
     const addChat = (e) => {
         e.preventDefault();
-        setChat(previousChat => [...previousChat, {message:message}]);
+
+        if(message.trim().length){
+            addChatToHistory(message,"outgoing")
+        }   
+       
+    }
+    
+    const addChatToHistory = (message, type) => {
+        setChat(previousChat => [...previousChat, {message:message, type:type}]);
+        setMessage('')
+        console.log("ZZZ SendChat chats:", [...chats, {message:message, type: type}].length)
     }
 
     return (
-        <div class="textArea">
         <form onSubmit={addChat}>
-            <textarea aria-label="Input message here" placeholder="How can we help you?" value={message} onChange={updateMessage} />
+        <div class="textArea">
+            <textarea aria-label={"Input message here"} placeholder="How can we help you?" value={message} onChange={updateMessage} />
             <button aria-label="Send Message"><span class="material-symbols-outlined iconSend">send</span></button>
-        </form>
         </div>
+        </form>
     )
 }
 
