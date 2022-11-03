@@ -1,53 +1,27 @@
 import './App.css';
-import React, {useState, useEffect, useContext, useRef} from "react";
-import { ChatContext } from '../src/context/ChatContext';
+import React, {useState, useEffect, useRef} from "react";
 
-import ChatHistory from '../src/components/ChatHistory';
-import SendChat from '../src/components/SendChat';
 import ChatContainer from '../src/components/ChatContainer';
 
 function App() {
-  const [chats, setChat] = useContext(ChatContext);
-  const chatInitiated = useRef(false);
+  const appStarted = useRef(false);
   const [showChat, setShowChat] = useState(false);
 
-useEffect(()=>{
+  useEffect(()=>{
+    if (appStarted.current) return;
+    appStarted.current = true;
 
-  const newMessage =  {
-    type:"incoming",
-    message: "Hi, Let us know how we can help and we'll get someone connected to you right away"
-  }
+    console.log("ZZZ app started..")
 
-setTimeout(() => {
-  sayHello(newMessage)
-}, 2000)
-
-  
-const sayHello = (newMessage) =>{
-  if (chatInitiated.current) return;
-  chatInitiated.current = true;
-
-  setChat(previousChat => [...previousChat, newMessage]); 
-}
-
-}, [chats,setChat])
+  }, [])
 
   return (
-    <div className="chatWindowContainer" aria-label="Chat Window">
-     
-      <div class="chatWindow">
-            <div class="titleBar" aria-label="header">
-                Chat
-                <span tabIndex={0} aria-label="Close" class="material-symbols-outlined icon">close</span>
-            </div>
-
-            <ChatHistory />
-
-      </div>
-
-      <SendChat />
-
+    <div>
+      {(!showChat)?(<button onClick={() => setShowChat(!showChat)} className='buttonPrimary'>Chat with support</button>):(<span></span>)}
+      
+      {(showChat)?(<ChatContainer />):(<span></span>)}
     </div>
+    
   );
 }
 

@@ -29,7 +29,7 @@ const AddChat = () => {
         <form onSubmit={addChat}>
         <div class="textArea">
             <textarea aria-label={"Input message here"} placeholder="How can we help you?" value={message} onChange={updateMessage} />
-            <button aria-label="Send Message"><span class="material-symbols-outlined iconSend">send</span></button>
+            <button className='submitButton' aria-label="Send Message"><span class="material-symbols-outlined iconSend">send</span></button>
         </div>
         </form>
     )

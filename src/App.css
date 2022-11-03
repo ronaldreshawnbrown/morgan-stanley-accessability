@@ -1,9 +1,14 @@
 
+        body {
+            margin: 5px;
+        }
         .chatWindowContainer{
           width: 371px;
           box-shadow: 0 0 11px 1px #82828225;
           border: 1px solid #949494;
           font-family: Arial, sans-serif;
+          margin-left: 30px;
+          margin-top: 30px;
       }
 
       .chatWindowContainer form{
@@ -122,7 +127,7 @@
           -webkit-text-fill-color:#5627d8;
           transform: rotate(-20deg);
       }
-       button {float:right;
+       .submitButton {float:right;
         background: white;
         border: white;
         }
