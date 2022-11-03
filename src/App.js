@@ -15,11 +15,16 @@ function App() {
 
   }, [])
 
+  const closeChat = () => {
+    console.log("ZZZ close")
+    setShowChat(false)
+  }
+
   return (
     <div>
       {(!showChat)?(<button onClick={() => setShowChat(!showChat)} className='buttonPrimary'>Chat with support</button>):(<span></span>)}
       
-      {(showChat)?(<ChatContainer />):(<span></span>)}
+      {(showChat)?(<ChatContainer handleClose={closeChat} />):(<span></span>)}
     </div>
     
   );
